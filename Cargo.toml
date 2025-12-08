@@ -1,28 +1,23 @@
 [package]
 name = "kodegend_client_ipc"
-version = "0.8.0"
+version = "0.10.0"
 edition = "2024"
-description = "KODEGEN.ᴀɪ: Memory-efficient, Blazing-Fast, MCP tools for code generation agents."
-license = "Apache-2.0 OR MIT"
+description = "Cross-platform IPC client for kodegend daemon"
 authors = ["KODEGEN.ᴀɪ"]
 homepage = "https://kodegen.ai"
-repository = "https://github.com/cyrup-ai/kodegend-client-ipc"
-readme = "README.md"
-categories = ["development-tools", "command-line-utilities", "api-bindings"]
-keywords = [
-    "mcp",
-    "terminal",
-    "agent",
-    "filesystem",
-    "claude"
-]
+repository = "https://github.com/cyrup-ai/kodegend"
+license = "Apache-2.0 OR MIT"
 
 [dependencies]
+kodegend_protocol_ipc = { version = "0.10" }
+serde = "1"
+serde_json = "1"
+thiserror = "2"
+dirs = "6"
 
-
-[dev-dependencies]
-env_logger = "0.11"
-
-[lib]
-name = "kodegend_client_ipc"
-path = "src/lib.rs"
+[target.'cfg(windows)'.dependencies]
+windows = { version = "0.62", features = [
+    "Win32_Foundation",
+    "Win32_Storage_FileSystem",
+    "Win32_System_Pipes",
+] }
