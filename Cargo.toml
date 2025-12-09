@@ -9,7 +9,7 @@ repository = "https://github.com/cyrup-ai/kodegend"
 license = "Apache-2.0 OR MIT"
 
 [dependencies]
-kodegend_protocol_ipc = { version = "0.10", path = "../kodegend-protocol-ipc" }
+kodegend_protocol_ipc = { version = "0.10" }
 serde = "1"
 serde_json = "1"
 thiserror = "2"
