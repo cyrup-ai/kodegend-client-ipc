@@ -68,7 +68,7 @@ pub fn connect_named_pipe(path: &str) -> io::Result<NamedPipeStream> {
     unsafe {
         let handle = CreateFileW(
             PCWSTR(wide_path.as_ptr()),
-            (FILE_GENERIC_READ.0 | FILE_GENERIC_WRITE.0),
+            FILE_GENERIC_READ.0 | FILE_GENERIC_WRITE.0,
             FILE_SHARE_NONE,
             None,
             OPEN_EXISTING,

@@ -1,6 +1,8 @@
 //! Cross-platform connection to kodegend daemon
 
 use crate::error::IpcError;
+
+#[cfg(unix)]
 use std::path::PathBuf;
 
 #[cfg(unix)]
