@@ -1,6 +1,6 @@
 [package]
 name = "kodegend_client_ipc"
-version = "0.10.2"
+version = "0.10.3"
 edition = "2024"
 description = "Cross-platform IPC client for kodegend daemon"
 authors = ["KODEGEN.ᴀɪ"]
